@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.screens.book.BookAboutScreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/image_view_main2"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/ic_baseline_location_on_24"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="-38dp" />
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/image_view_main2"
+            android:padding="8dp"
+            android:background="@drawable/bg_color"
+            app:layout_constraintBottom_toBottomOf="@id/image_view_main2"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/image_view_main2"
+            android:src="@drawable/unlike"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/like_button"
+            android:layout_margin="16dp"
+            android:clickable="true"
+
+            android:focusable="true"
+            android:padding="8dp"
+            android:background="@drawable/bg_button"
+            />
+
+        <ImageView
+            android:padding="8dp"
+            android:clickable="true"
+            android:paddingStart="10dp"
+            android:id="@+id/back_btn"
+            android:background="@drawable/bg_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Germany"
+            android:textColor="@color/color_menu"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/starts"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_view_main2" />
+
+        <LinearLayout
+            android:id="@+id/starts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/text_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_title">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_baseline_star_24"
+                app:tint="@color/star_color" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_baseline_star_24"
+                app:tint="@color/star_color" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_baseline_star_24"
+                app:tint="@color/star_color" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_baseline_star_24"
+                app:tint="@color/star_color" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/locationTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_location_on_24"
+            android:drawableTint="@color/color_menu"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="5dp"
+            android:text="Europe"
+            android:textColor="@color/color_menu"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/text_title" />
+
+        <TextView
+            android:id="@+id/text___"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:justificationMode="inter_word"
+            android:padding="16dp"
+            android:textColor="@color/color_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/locationTxt"
+            tools:text=" Android Studio supports a variety of XML attributes
+             in the tools namespace that enable design-time features (such as which layout
+             to show in a fragment) or compile-time behaviors (such as which shrinking mode
+             to apply to your XML resources). When you build your app, the build tools
+             remove these attributes so there is no effect on your APK size or runtime
+              behavior.
+              To use these attributes, add the tools namespace to the root element of each XML
+              file where you'd like to use them, as shown here:"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

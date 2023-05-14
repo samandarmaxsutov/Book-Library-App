@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        tools:layout="@layout/fragment_splash_screen"
+        android:id="@+id/splashScreen"
+        android:name="uz.it_school.booklibraryapp.ui.screens.splashScreen.SplashScreen"
+        android:label="SplashScreen" >
+        <action
+            android:id="@+id/action_splashScreen_to_homeScreen"
+            app:destination="@id/homeScreen"
+            app:popUpTo="@id/nav_graph.xml" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_home_screen"
+        android:id="@+id/homeScreen"
+        android:name="uz.it_school.booklibraryapp.ui.screens.home.HomeScreen"
+        android:label="HomeScreen" >
+        <action
+            android:id="@+id/action_homeScreen_to_bookAboutScreen"
+            app:destination="@id/bookAboutScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_bookMarksScreen"
+            app:destination="@id/bookMarksScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookAboutScreen"
+        android:name="uz.it_school.booklibraryapp.ui.screens.book.BookAboutScreen"
+        android:label="fragment_book_about"
+        tools:layout="@layout/fragment_book_about" >
+        <argument
+            android:name="book"
+            app:argType="uz.it_school.booklibraryapp.model.room.entities.BookEntity" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookMarksScreen"
+        android:name="uz.it_school.booklibraryapp.ui.screens.bookMarks.BookMarksScreen"
+        android:label="BookMarksScreen" >
+        <action
+            android:id="@+id/action_bookMarksScreen_to_bookAboutScreen"
+            app:destination="@id/bookAboutScreen" />
+    </fragment>
+</navigation>
